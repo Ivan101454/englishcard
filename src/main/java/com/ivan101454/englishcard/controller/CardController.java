@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
-@RequestMapping("/")
-public class cardController {
+@RequestMapping("/rest")
+public class CardController {
     @Autowired
     private ICardService iCardService;
     @PostMapping("create")
@@ -24,7 +23,7 @@ public class cardController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
     @GetMapping("get/{id}")
-    public ResponseEntity<Optional<Card>> getCard(@PathVariable long id) {
+    public ResponseEntity<Optional<Card>> getCard(@PathVariable("id") long id) {
         return ResponseEntity.status(HttpStatus.OK).body(iCardService.getCard(id));
     }
 
