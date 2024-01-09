@@ -9,5 +9,4 @@ public class EnglishcardApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EnglishcardApplication.class, args);
 	}
-
 }
