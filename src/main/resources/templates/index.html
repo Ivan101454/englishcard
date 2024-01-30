@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" th:href="@{/images/catico.png}" type="image/x-icon">
+    <link href="/styles/css/style.css" rel="stylesheet">
+    <title>EnglishCard</title>
+</head>
+<body>
+<header>
+    <div class="container">
+
+        <div class="header-line">
+            <div class="header-logo">
+                <a th:href="@{http://localhost:8080/eng/flashcard}">
+                    <img th:src="@{/images/hello.jpg}" alt="" class="header-picture">
+                </a>
+            </div>
+            <nav>
+                <a class="nav-item"  th:href="@{http://localhost:8080/eng/flashcard}">
+                <a class="nav-item" href="@">УЧИТЬ</a>
+                <a class="nav-item" href="@">СОЗДАТЬ</a>
+                <a class="nav-item" href="#">ВАША БИБЛИОТЕКА</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<main class="main">
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="container-card">
+                <div class="card-image">
+                    <img class="card-img" th:src="@{/images/goodbye.jpg}" alt=""/>
+                </div>
+                <div class="card-title">
+                    Ответьте на вопрос.
+                </div>
+
+                <div class="card-desc">
+                    <div th:each="cardDTO : ${list}">
+                        <p style="text-question">Вопрос</p>
+                        <p style="text-question" th:text="${cardDTO.question}"></p>
+                        <p style="text-answer1">Ответ</p>
+                    </div>
+                </div>
+                <div class="text-answer" th:each="cardDTO : ${list}">
+                    <div>
+                        <p th:text="${cardDTO.answer}"></p>
+                        <img th:src="@{${cardDTO.picturePath}}" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn">
+    <a class="button" th:href="@{'http://localhost:8080/eng/flashcard?page='+${previousPage}}">Предыдущая страница</a>
+    <a class="button" th:href="@{'http://localhost:8080/eng/flashcard?page='+${nextPage}}">Следующая страница</a>
+    </div>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</main>
+
+</body>
+</html>

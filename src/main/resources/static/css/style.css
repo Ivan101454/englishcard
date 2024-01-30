@@ -1,0 +1,121 @@
+.logo {
+    margin: 0px 114px;
+}
+nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 0px 114px;
+}
+.header-picture {
+    width: 138px;
+    height: 92px;
+    margin-right: 25px;
+}
+.header-name {
+    margin-left: 34px;
+}
+header {
+    background-image: url(/images/catofengland.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header-line {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header-down {
+    color: #282e3e;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0px 114px;
+}
+.nav-item {
+    color: #282e3e;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 25px;
+    transition: color 0.3s linear;
+}
+.nav-item:hover {
+    color: #4255ff;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    background-color: #f6f7fb;
+    color: #586380;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 700;
+    transition: color 0.3s linear;
+}
+.button:hover {
+    color: #4255ff;
+}
+
+.cards {
+    background-color: #f6f7fb;
+    display: flex;
+        justify-content: center;
+}
+
+.card {
+
+
+    margin-top: -37px;
+    box-shadow: 10px 10px 40px 20px #FFE8D0;
+}
+.card-image {
+    display: flex;
+    justify-content: center;
+}
+.card-title {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFE8D0;
+    box-shadow: 10px 10px 40px 20px #FFE8D0;
+}
+
+.card-img {
+    width: 170px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+}
+.container-card {
+
+}
+.text-answer {
+    opacity: 0;
+}
+
+.text-answer:hover {
+    opacity: 1;
+}
+.card-desc {
+
+}
+.register {
+    width: 576px;
+    height: 400;
+    display: flex;
+    justify-content: center;
+    background-color: #dee3e9;
+    padding: 32px 32px;
+    margin: 146.800px 80px;
+    border: solid;
+}
+

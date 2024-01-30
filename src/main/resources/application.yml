@@ -12,3 +12,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/english    # schema englishcard
     username: postgres
     password: postgres
+  servlet:
+    multipart:
+      max-file-size: 128MB
+      max-request-size: 128MB
+      enabled: true
+upload:
+  path: C:\\Users\\User\\new

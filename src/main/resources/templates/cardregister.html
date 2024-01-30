@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" th:href="@{/images/catico.png}" type="image/x-icon">
+    <link href="/styles/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div th:if="${message}">
+            <h2 th:text="${message}"/>
+        </div>
+        <div>
+            <div class="register">
+                <form enctype="multipart/form-data" method="post" action="http://localhost:8080/eng/createcard">
+                    <input name="question"/>
+                    <input name="answer"/>
+                    <input type="file" name="file">
+                    <input type="submit" value="Создать">
+                </form>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li th:each="file : ${files}">
+                    <a th:href="${file}" th:text="${file}" />
+                </li>
+            </ul>
+        </div>
+
+    </main>
+</body>

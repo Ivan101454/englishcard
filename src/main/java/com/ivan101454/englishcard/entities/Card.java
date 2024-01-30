@@ -20,5 +20,7 @@ public class Card {
     private String answer;
     @Column(name = "itLearned", columnDefinition = "boolean default false")
     private boolean itLearned;
+    @Column(name = "picturePath")
+    private String picturePath;
 }
 

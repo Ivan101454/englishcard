@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/rest")
-public class CardController {
+public class CardRestController {
     @Autowired
     private ICardService iCardService;
     @PostMapping("create")
@@ -44,5 +44,7 @@ public class CardController {
                                                     @RequestParam(required = false, defaultValue = "10") int size) {
         return  ResponseEntity.status(HttpStatus.OK).body(iCardService.getAllCard(PageRequest.of(page, size)));
     }
+
+
 
 }
